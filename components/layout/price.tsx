@@ -14,7 +14,7 @@ const PRICING_DATA: Record<string, any> = {
   "Praktik Dental & Umum": [
     {
       name: "Starter",
-      price: "2.500.000",
+      price: "2.000.000",
       description: "Solusi tepat untuk memulai kehadiran digital praktik Anda.",
       features: [
         "Landing Page Profesional",
@@ -28,7 +28,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Profesional",
-      price: "4.800.000",
+      price: "4.500.000",
       description: "Fitur lengkap untuk manajemen pasien yang lebih baik.",
       popular: true,
       features: [
@@ -59,7 +59,7 @@ const PRICING_DATA: Record<string, any> = {
   "Company Profile": [
     {
       name: "Starter",
-      price: "2.000.000",
+      price: "1.500.000",
       description: "Identitas digital esensial untuk bisnis Anda.",
       features: [
         "Modern Landing Page",
@@ -72,7 +72,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Profesional",
-      price: "4.200.000",
+      price: "3.500.000",
       description: "Meningkatkan kredibilitas bisnis ke level selanjutnya.",
       popular: true,
       features: [
@@ -87,7 +87,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Enterprise",
-      price: "6.800.000",
+      price: "6.500.000",
       description: "Solusi korporat dengan performa dan keamanan tinggi.",
       features: [
         "High-Performance Website",
@@ -103,7 +103,7 @@ const PRICING_DATA: Record<string, any> = {
   "Optimasi SEO": [
     {
       name: "Starter",
-      price: "1.800.000",
+      price: "1.500.000",
       description: "Langkah awal mendominasi pencarian lokal.",
       features: [
         "Audit SEO Website",
@@ -146,7 +146,7 @@ const PRICING_DATA: Record<string, any> = {
   "Automasi Sistem": [
     {
       name: "Starter",
-      price: "3.000.000",
+      price: "2.500.000",
       description: "Efisiensi alur kerja untuk operasional harian.",
       features: [
         "Automasi WhatsApp Blast",
@@ -158,7 +158,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Profesional",
-      price: "5.500.000",
+      price: "4.500.000",
       description: "Sistem cerdas untuk pertumbuhan tanpa hambatan.",
       popular: true,
       features: [
@@ -223,8 +223,8 @@ export function Price() {
                 key={service}
                 onClick={() => setActiveService(service)}
                 className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${activeService === service
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                    : "text-white/60 hover:text-white hover:bg-white/5"
+                  ? "bg-primary text-white shadow-lg shadow-primary/30"
+                  : "text-white/60 hover:text-white hover:bg-white/5"
                   }`}
               >
                 {service}
@@ -240,8 +240,8 @@ export function Price() {
               key={plan.name}
               data-reveal
               className={`relative group p-8 rounded-[40px] border transition-all duration-500 flex flex-col ${plan.popular
-                  ? "bg-primary/5 border-primary/30 shadow-2xl shadow-primary/10 scale-105 z-20"
-                  : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06] hover:border-white/20"
+                ? "bg-primary/5 border-primary/30 shadow-2xl shadow-primary/10 scale-105 z-20"
+                : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06] hover:border-white/20"
                 }`}
             >
               {plan.popular && (
