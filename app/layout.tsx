@@ -9,7 +9,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website Profesional | Qelana Dev",
+  title: "Qelana | Jasa Pembuatan Website Profesional",
   description: "Jasa pembuatan website profesional untuk praktik dental, dokter, company profile, dan custom website. Optimasi SEO dan desain premium.",
 };
 
