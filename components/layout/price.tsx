@@ -4,8 +4,8 @@ import ButtonContact from "../ui/button-contact";
 
 const SERVICES_LIST = [
   "Praktik Dental & Umum",
-  "Usaha Meubeul",
-  "Jasa Homecare",
+  "Showroom Mobil / Motor",
+  "Modifikasi Mobil / Audio System",
   "UMKM & Bisnis Lokal",
   "Optimasi SEO",
   "Automasi Sistem",
@@ -79,20 +79,21 @@ const PRICING_DATA: Record<string, any> = {
     }
   ],
 
-  "Usaha Meubeul": [
+  "Showroom Mobil / Motor": [
     {
       name: "Starter",
       price: "2.500.000",
       description:
-        "Landing page profesional untuk menampilkan produk furniture dan meningkatkan kepercayaan customer.",
+        "Landing page profesional untuk meningkatkan trust calon buyer dan menampilkan koleksi kendaraan secara elegan.",
       features: [
         "Free Domain (.com)",
         "Shared Hosting (6 Bulan)",
         "Desain Responsif (Mobile & Desktop)",
         "1 Halaman Landing Page (scroll panjang)",
-        "Galeri Produk Furniture (harga & deskripsi singkat)",
+        "Galeri Mobil / Motor (harga & deskripsi singkat)",
         "Tombol Beli Sekarang -> Direct ke WhatsApp",
-        "Section Testimoni / FAQ / Promo",
+        "Section Featured Unit / Testimoni / FAQ / Promo",
+        "Google Maps Integration",
         "1 Email Bisnis",
         "2 GB Disk Storage",
         "2x Revisi Gratis",
@@ -105,14 +106,13 @@ const PRICING_DATA: Record<string, any> = {
       price: "7.000.000",
       popular: true,
       description:
-        "Website company profile modern untuk bisnis furniture dan custom project.",
+        "Website showroom lengkap untuk meningkatkan kredibilitas bisnis dan mempermudah calon customer melihat unit.",
       features: [
         "Semua fitur Starter, plus:",
         "Hosting 1 Tahun",
-        "5–7 Halaman Utama (Home, Shop, About Us, Contact, FAQ, Testimoni, Promo",
-        "Katalog Produk Dinamis (20-100 produk)",
-        "Halaman Detail Produk",
-        "Desain Custom Kategori Produk",
+        "5–7 Halaman Utama (Home, Katalog, Showroom, About Us, Contact, FAQ, Promo)",
+        "Filter Jenis Mobil / Motor",
+        "Halaman Detail Tiap Unit",
         "SEO On-Page Basic (meta title, slug, heading structure)",
         "2 Email Bisnis",
         "10 GB Disk Storage",
@@ -124,15 +124,14 @@ const PRICING_DATA: Record<string, any> = {
       name: "Enterprise",
       price: "12.000.000",
       description:
-        "Platform furniture modern dengan katalog interaktif dan sistem pemesanan digital.",
+        "Platform showroom modern dengan sistem inquiry dan booking digital untuk meningkatkan konversi penjualan.",
       features: [
         "Semua fitur Professional plus:",
-        "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
-        "Metode Pembayaran: Transfer, QRIS, e-wallet, Credit Card",
-        "Request Quotation System",
-        "Dashboard Admin (Order, Produk, Stok, Diskon, User, dll",
-        "Inventory Sync",
-        "Mobile Friendly Cart Experience",
+        "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe) untuk Booking Fee",
+        "Sistem Pengelola Calon Pembeli Otomatis (CRM Inquiry)",
+        "Katalog Mobil / Motor Real Time",
+        "CMS Editable",
+        "Desain Interaktif & Animasi",
         "Speed Optimization",
         "Priority Support",
         "3 Email Bisnis",
@@ -142,22 +141,21 @@ const PRICING_DATA: Record<string, any> = {
     }
   ],
 
-  "Jasa Homecare": [
+  "Modifikasi Mobil / Audio System": [
     {
       name: "Starter",
       price: "2.500.000",
       description:
-        "Landing page profesional untuk meningkatkan trust dan mempermudah pasien homecare menghubungi layanan.",
+        "Landing page modern untuk menampilkan hasil modifikasi dan meningkatkan trust calon customer.",
       features: [
         "Free Domain (.com)",
         "Shared Hosting (6 Bulan)",
         "Desain Responsif (Mobile & Desktop)",
         "1 Halaman Landing Page (scroll panjang)",
         "CTA Konsultasi via WhatsApp",
-        "Section Layanan Homecare & Paket",
-        "Testimoni Pasien",
+        "Galeri Hasil Modifikasi (Before & After)",
+        "Section Produk & Layanan",
         "Google Maps Integration",
-        "Harga / Durasi Paket",
         "1 Email Bisnis",
         "2 GB Disk Storage",
         "2x Revisi Gratis",
@@ -171,16 +169,15 @@ const PRICING_DATA: Record<string, any> = {
       price: "6.000.000",
       popular: true,
       description:
-        "Website lengkap untuk membangun kredibilitas layanan homecare profesional.",
+        "Website lengkap untuk workshop audio dan modifikasi agar tampil lebih premium dan profesional.",
       features: [
         "Semua fitur Starter",
         "Hosting 1 Tahun",
-        "5–7 Halaman Utama (Home, About Us, Contact, FAQ, Testimoni, Layanan, Paket)",
+        "5–7 Halaman Utama (Home, About Us, Project, Products, Services, Contact, FAQ)",
         "Page Individual untuk Setiap Layanan/Paket",
-        "Form Booking Appointment",
-        "Profil Tim Medis",
+        "Form Booking Instalasi",
+        "Testimoni Customer",
         "SEO On-Page Basic (meta title, slug, heading structure)",
-        "Google Business Integration",
         "CTA WhatsApp di setiap halaman Layanan",
         "2 Email Bisnis",
         "10 GB Disk Storage",
@@ -192,13 +189,13 @@ const PRICING_DATA: Record<string, any> = {
       name: "Enterprise",
       price: "12.000.000",
       description:
-        "Sistem homecare modern dengan booking, pembayaran, dan manajemen layanan digital.",
+        "Sistem digital modern untuk workshop audio dan modifikasi dengan fitur booking dan inquiry otomatis.",
       features: [
         "Semua fitur Professional, plus:",
         "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
-        "Online Booking System (Nama, Jadwal, Keluhan/Layanan yang Diinginkan)",
-        "Email Notifikasi Otomatis (ke admin & customer)",
-        "Fitur Kalender Jadwal Ketersediaan Layanan",
+        "Online Booking System (Nama, Jadwal, Jasa yang Diinginkan)",
+        "Email/WhatsApp Notifikasi Otomatis (ke admin & customer)",
+        "CMS Editable",
         "Desain Interaktif & Animasi (Parallax & Smooth Scroll)",
         "Speed Optimization",
         "Priority Support",

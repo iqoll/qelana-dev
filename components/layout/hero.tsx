@@ -5,8 +5,8 @@ import ButtonContact from "../ui/button-contact";
 
 const services = [
   "Praktik Dental & Umum",
-  "Usaha Meubeul",
-  "Jasa Homecare",
+  "Showroom Mobil / Motor",
+  "Modifikasi Mobil / Audio System",
   "UMKM & Bisnis Lokal",
   "Optimasi SEO",
   "Automasi Sistem",
