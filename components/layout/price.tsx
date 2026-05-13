@@ -4,7 +4,9 @@ import ButtonContact from "../ui/button-contact";
 
 const SERVICES_LIST = [
   "Praktik Dental & Umum",
-  "Company Profile",
+  "Usaha Meubeul",
+  "Jasa Homecare",
+  "UMKM & Bisnis Lokal",
   "Optimasi SEO",
   "Automasi Sistem",
   "Custom"
@@ -14,89 +16,259 @@ const PRICING_DATA: Record<string, any> = {
   "Praktik Dental & Umum": [
     {
       name: "Starter",
-      price: "2.000.000",
-      description: "Solusi tepat untuk memulai kehadiran digital praktik Anda.",
+      price: "2.500.000",
+      description:
+        "Cocok untuk praktik dokter yang ingin tampil profesional dan mempermudah pasien menghubungi klinik.",
       features: [
-        "Landing Page Profesional",
-        "Mobile Responsive",
-        "Integrasi WhatsApp & Maps",
-        "Fitur Jadwal Praktik",
-        "Domain .com/ .id (1 Thn)",
-        "Hosting Cloud (1 Thn)",
-        "SSL Security Certificate"
+        "Free Domain (.com)",
+        "Shared Hosting (6 Bulan)",
+        "Desain Responsif (Mobile & Desktop)",
+        "1 Halaman Landing Page (scroll panjang)",
+        "CTA Reservasi via WhatsApp",
+        "Section Dokter & Layanan",
+        "Google Maps Integration",
+        "1 Email Bisnis",
+        "2 GB Disk Storage",
+        "2x Revisi Gratis",
+        "Free SSL",
+        "Garansi Maintenance 15 Hari",
+        "Video Panduan Akses Website"
       ]
     },
     {
-      name: "Profesional",
-      price: "4.500.000",
-      description: "Fitur lengkap untuk manajemen pasien yang lebih baik.",
+      name: "Professional",
+      price: "6.000.000",
       popular: true,
+      description:
+        "Website lengkap untuk meningkatkan kredibilitas klinik dan mempermudah reservasi pasien.",
       features: [
-        "Website Multi-Page (5 Hal)",
-        "Sistem Reservasi Online",
-        "Galeri Fasilitas & Tim Medis",
-        "Optimasi SEO Dasar",
-        "Copywriting Profesional",
-        "Integrasi Google My Business",
-        "Maintenance 3 Bulan"
+        "Semua fitur Starter, plus:",
+        "Hosting 1 Tahun",
+        "5–7 Halaman Utama (Home, About, Treatment, Galeri, Testimoni, Contact, FAQ)",
+        "Halaman Detail Treatment / Layanan",
+        "Form Reservasi Online",
+        "Galeri Foto & Video Klinik & Fasilitas",
+        "Testimoni Pasien",
+        "SEO On-Page Dasar (meta title, slug, heading structure)",
+        "2 Email Bisnis",
+        "10 GB Disk Storage",
+        "3x Revisi Gratis",
+        "Garansi Maintenance 1 Bulan"
+      ]
+    },
+    {
+      name: "Enterprise",
+      price: "12.000.000",
+      description:
+        "Sistem digital modern untuk klinik dengan fitur booking dan pembayaran online.",
+      features: [
+        "Semua fitur Professional, plus:",
+        "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
+        "Dashboard Booking Pasien",
+        "Form Appointment Otomatis (Nama, Jadwal, Keluhan/Layanan yang Diinginkan)",
+        "Email Notifikasi Otomatis (ke admin & customer)",
+        "Blog & Artikel Edukasi",
+        "Fitur Kalender Jadwal Ketersediaan",
+        "Desain Interaktif & Animasi",
+        "Speed Optimization",
+        "Priority Support",
+        "3 Email Bisnis",
+        "5x Revisi Gratis",
+        "Garansi Maintenance 1,5 Bulan"
+      ]
+    }
+  ],
+
+  "Usaha Meubeul": [
+    {
+      name: "Starter",
+      price: "2.500.000",
+      description:
+        "Landing page profesional untuk menampilkan produk furniture dan meningkatkan kepercayaan customer.",
+      features: [
+        "Free Domain (.com)",
+        "Shared Hosting (6 Bulan)",
+        "Desain Responsif (Mobile & Desktop)",
+        "1 Halaman Landing Page (scroll panjang)",
+        "Galeri Produk Furniture (harga & deskripsi singkat)",
+        "Tombol Beli Sekarang -> Direct ke WhatsApp",
+        "Section Testimoni / FAQ / Promo",
+        "1 Email Bisnis",
+        "2 GB Disk Storage",
+        "2x Revisi Gratis",
+        "Free SSL",
+        "Garansi Maintenance 15 Hari"
+      ]
+    },
+    {
+      name: "Professional",
+      price: "7.000.000",
+      popular: true,
+      description:
+        "Website company profile modern untuk bisnis furniture dan custom project.",
+      features: [
+        "Semua fitur Starter, plus:",
+        "Hosting 1 Tahun",
+        "5–7 Halaman Utama (Home, Shop, About Us, Contact, FAQ, Testimoni, Promo",
+        "Katalog Produk Dinamis (20-100 produk)",
+        "Halaman Detail Produk",
+        "Desain Custom Kategori Produk",
+        "SEO On-Page Basic (meta title, slug, heading structure)",
+        "2 Email Bisnis",
+        "10 GB Disk Storage",
+        "3x Revisi Gratis",
+        "Garansi Maintenance 1 Bulan"
+      ]
+    },
+    {
+      name: "Enterprise",
+      price: "12.000.000",
+      description:
+        "Platform furniture modern dengan katalog interaktif dan sistem pemesanan digital.",
+      features: [
+        "Semua fitur Professional plus:",
+        "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
+        "Metode Pembayaran: Transfer, QRIS, e-wallet, Credit Card",
+        "Request Quotation System",
+        "Dashboard Admin (Order, Produk, Stok, Diskon, User, dll",
+        "Inventory Sync",
+        "Mobile Friendly Cart Experience",
+        "Speed Optimization",
+        "Priority Support",
+        "3 Email Bisnis",
+        "5x Revisi Gratis",
+        "Garansi Maintenance 1,5 Bulan"
+      ]
+    }
+  ],
+
+  "Jasa Homecare": [
+    {
+      name: "Starter",
+      price: "2.500.000",
+      description:
+        "Landing page profesional untuk meningkatkan trust dan mempermudah pasien homecare menghubungi layanan.",
+      features: [
+        "Free Domain (.com)",
+        "Shared Hosting (6 Bulan)",
+        "Desain Responsif (Mobile & Desktop)",
+        "1 Halaman Landing Page (scroll panjang)",
+        "CTA Konsultasi via WhatsApp",
+        "Section Layanan Homecare & Paket",
+        "Testimoni Pasien",
+        "Google Maps Integration",
+        "Harga / Durasi Paket",
+        "1 Email Bisnis",
+        "2 GB Disk Storage",
+        "2x Revisi Gratis",
+        "Free SSL",
+        "Garansi Maintenance 15 Hari",
+        "Video Panduan Akses Website"
+      ]
+    },
+    {
+      name: "Professional",
+      price: "6.000.000",
+      popular: true,
+      description:
+        "Website lengkap untuk membangun kredibilitas layanan homecare profesional.",
+      features: [
+        "Semua fitur Starter",
+        "Hosting 1 Tahun",
+        "5–7 Halaman Utama (Home, About Us, Contact, FAQ, Testimoni, Layanan, Paket)",
+        "Page Individual untuk Setiap Layanan/Paket",
+        "Form Booking Appointment",
+        "Profil Tim Medis",
+        "SEO On-Page Basic (meta title, slug, heading structure)",
+        "Google Business Integration",
+        "CTA WhatsApp di setiap halaman Layanan",
+        "2 Email Bisnis",
+        "10 GB Disk Storage",
+        "3x Revisi Gratis",
+        "Garansi Maintenance 1 Bulan"
+      ]
+    },
+    {
+      name: "Enterprise",
+      price: "12.000.000",
+      description:
+        "Sistem homecare modern dengan booking, pembayaran, dan manajemen layanan digital.",
+      features: [
+        "Semua fitur Professional, plus:",
+        "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
+        "Online Booking System (Nama, Jadwal, Keluhan/Layanan yang Diinginkan)",
+        "Email Notifikasi Otomatis (ke admin & customer)",
+        "Fitur Kalender Jadwal Ketersediaan Layanan",
+        "Desain Interaktif & Animasi (Parallax & Smooth Scroll)",
+        "Speed Optimization",
+        "Priority Support",
+        "3 Email Bisnis",
+        "5x Revisi Gratis",
+        "Garansi Maintenance 1,5 Bulan"
+      ]
+    }
+  ],
+  "UMKM & Bisnis Lokal": [
+    {
+      name: "Starter",
+      price: "1.500.000",
+      description:
+        "Landing page profesional untuk membantu UMKM tampil lebih terpercaya dan mudah dihubungi customer.",
+      features: [
+        "Free Domain (.com)",
+        "Shared Hosting (6 Bulan)",
+        "Desain Responsif (Mobile & Desktop)",
+        "1 Halaman Landing Page",
+        "CTA WhatsApp Order / Konsultasi",
+        "Section Produk / Layanan",
+        "Google Maps Integration",
+        "1 Email Bisnis",
+        "2 GB Disk Storage",
+        "2x Revisi Gratis",
+        "Free SSL",
+        "Garansi Maintenance 15 Hari",
+        "Video Panduan Akses Website"
+      ]
+    },
+    {
+      name: "Professional",
+      price: "3.500.000",
+      popular: true,
+      description:
+        "Website company profile lengkap untuk meningkatkan kredibilitas dan penjualan bisnis lokal.",
+      features: [
+        "Semua fitur Starter, plus:",
+        "Hosting 1 Tahun",
+        "5–7 Halaman Utama (Home, About Us, Contact, FAQ, Testimoni, Layanan/Produk)",
+        "Halaman Detail Produk / Layanan",
+        "Galeri Portfolio / Produk",
+        "Form Order / Konsultasi",
+        "SEO On-Page Basic (meta title, slug, heading structure)",
+        "Google Business Integration",
+        "2 Email Bisnis",
+        "10 GB Disk Storage",
+        "3x Revisi Gratis",
+        "Garansi Maintenance 1 Bulan"
       ]
     },
     {
       name: "Enterprise",
       price: "7.500.000",
-      description: "Sistem digital terintegrasi untuk klinik skala besar.",
+      description:
+        "Sistem website modern untuk UMKM yang ingin meningkatkan penjualan dan otomatisasi bisnis.",
       features: [
-        "Custom UI/UX Design",
-        "Sistem Rekam Medis Dasar",
-        "Fitur Blog & Edukasi",
-        "Optimasi Speed (Core Web Vitals)",
-        "Premium SEO Strategy",
-        "Priority Support 24/7",
-        "Maintenance 6 Bulan"
-      ]
-    }
-  ],
-  "Company Profile": [
-    {
-      name: "Starter",
-      price: "1.500.000",
-      description: "Identitas digital esensial untuk bisnis Anda.",
-      features: [
-        "Modern Landing Page",
-        "Company Profile Section",
-        "Product/Service Showcase",
-        "Contact Form Integration",
-        "Domain & Hosting (1 Thn)",
-        "Mobile Friendly Design"
-      ]
-    },
-    {
-      name: "Profesional",
-      price: "3.500.000",
-      description: "Meningkatkan kredibilitas bisnis ke level selanjutnya.",
-      popular: true,
-      features: [
-        "Multi-page Business Site",
-        "CMS (Bisa Edit Konten)",
-        "Portfolio/Project Gallery",
-        "Integrasi Sosial Media",
-        "SEO Optimization",
-        "Professional Business Email",
-        "Maintenance 2 Bulan"
-      ]
-    },
-    {
-      name: "Enterprise",
-      price: "6.500.000",
-      description: "Solusi korporat dengan performa dan keamanan tinggi.",
-      features: [
-        "High-Performance Website",
-        "Multi-language Support",
-        "Advanced Analytics Tool",
-        "Custom Iconography",
-        "Lead Generation System",
-        "Security Hardening",
-        "Maintenance 6 Bulan"
+        "Semua fitur Professional, plus:",
+        "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
+        "Dashboard Admin/User",
+        "Metode Pembayaran: Transfer, QRIS, e-wallet, Credit Card",
+        "Request Quotation System",
+        "Email & WhatsApp Notification",
+        "Desain Interaktif & Animasi",
+        "Speed Optimization",
+        "Priority Support",
+        "3 Email Bisnis",
+        "5x Revisi Gratis",
+        "Garansi Maintenance 1,5 Bulan"
       ]
     }
   ],
@@ -104,11 +276,12 @@ const PRICING_DATA: Record<string, any> = {
     {
       name: "Starter",
       price: "1.500.000",
-      description: "Langkah awal mendominasi pencarian lokal.",
+      description:
+        "Langkah awal mendominasi pencarian lokal dan meningkatkan visibilitas bisnis.",
       features: [
-        "Audit SEO Website",
+        "SEO Audit Website",
         "Keyword Research (5 Keywords)",
-        "On-Page Optimization",
+        "On-page SEO Optimization",
         "Google Search Console Setup",
         "Google Analytics Setup",
         "Local SEO Setup"
@@ -117,85 +290,93 @@ const PRICING_DATA: Record<string, any> = {
     {
       name: "Profesional",
       price: "3.500.000",
-      description: "Strategi konten untuk trafik organik yang berkelanjutan.",
+      description:
+        "Strategi SEO berkelanjutan untuk meningkatkan trafik organik bisnis.",
       popular: true,
       features: [
         "Semua Fitur Starter",
         "Keyword Research (15 Keywords)",
-        "4 SEO-Optimized Articles",
+        "4 SEO Articles",
         "Technical SEO Fixes",
         "Backlink Strategy Dasar",
-        "Monthly Performance Report"
+        "Monthly Report"
       ]
     },
     {
       name: "Enterprise",
-      price: "6.500.000",
-      description: "Dominasi pasar secara menyeluruh dan agresif.",
+      price: "7.500.000",
+      description:
+        "Strategi SEO agresif untuk meningkatkan ranking dan konversi bisnis.",
       features: [
         "Semua Fitur Profesional",
-        "Unlimited Keywords Tracking",
-        "10 Premium SEO Articles",
+        "Unlimited Keyword Tracking",
+        "10 SEO Articles",
         "Competitor Analysis",
-        "Premium Backlink Building",
-        "Conversion Rate Optimization",
-        "Bi-weekly Strategy Call"
+        "Premium Backlink Strategy",
+        "Conversion Optimization",
+        "Bi-weekly Consultation"
       ]
     }
   ],
+
   "Automasi Sistem": [
     {
       name: "Starter",
-      price: "2.500.000",
-      description: "Efisiensi alur kerja untuk operasional harian.",
+      price: "3.000.000",
+      description:
+        "Automasi dasar untuk meningkatkan efisiensi operasional bisnis.",
       features: [
-        "Automasi WhatsApp Blast",
-        "Integrasi Google Sheets",
+        "WhatsApp Automation",
+        "Google Sheets Integration",
         "Auto-reply Customer Service",
-        "Sistem Notifikasi Email",
+        "Email Notifications",
         "Basic CRM Integration"
       ]
     },
     {
       name: "Profesional",
-      price: "4.500.000",
-      description: "Sistem cerdas untuk pertumbuhan tanpa hambatan.",
+      price: "6.500.000",
+      description:
+        "Workflow otomatis untuk mempercepat operasional dan meningkatkan produktivitas.",
       popular: true,
       features: [
         "Custom Workflow Automation",
-        "Integrasi Payment Gateway",
-        "Dashboard Laporan Real-time",
-        "Automasi Invoice & Receipt",
-        "Inventory Management Sync",
+        "Payment Gateway Integration",
+        "Realtime Dashboard",
+        "Invoice Automation",
+        "Inventory Sync",
         "Maintenance 2 Bulan"
       ]
     },
     {
       name: "Enterprise",
-      price: "8.500.000",
-      description: "Ekosistem digital otonom untuk skala perusahaan.",
+      price: "12.000.000",
+      description:
+        "Ekosistem digital terintegrasi untuk bisnis skala besar.",
       features: [
-        "Full ERP/CRM Customization",
-        "API Third-party Integration",
-        "AI Chatbot Implementation",
-        "High-security Data Tunneling",
-        "Custom Admin Panel",
-        "Priority Technical Support",
+        "Full Custom Automation",
+        "Third-party API Integration",
+        "AI Chatbot Integration",
+        "Custom Admin Dashboard",
+        "Advanced Security",
+        "Priority Support",
         "Maintenance 12 Bulan"
       ]
     }
   ],
+
   "Custom": [
     {
       name: "Custom Project",
       price: "Custom",
-      description: "Punya ide unik atau kebutuhan spesifik? Kami siap membangun sistem kustom sesuai visi Anda.",
+      description:
+        "Punya kebutuhan unik? Kami siap membangun solusi digital sesuai kebutuhan bisnis Anda.",
       features: [
-        "Free Konsultasi & Strategi",
-        "Custom Tech Stack Selection",
+        "Free Consultation",
+        "Custom Tech Stack",
         "Scalable Architecture",
-        "Dedicated Development Team",
-        "Flexible Scope & Features",
+        "Dedicated Development",
+        "Flexible Features",
         "Post-launch Support"
       ]
     }
@@ -280,6 +461,7 @@ export function Price() {
 
               <ButtonContact
                 variant="large"
+                greetingMessage={`%20${activeService}%20-%20${plan.name}`}
                 className={`w-full ${plan.popular ? "bg-primary" : "bg-white/10 hover:bg-white hover:text-black"}`}
               />
             </div>
