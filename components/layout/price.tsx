@@ -103,7 +103,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Professional",
-      price: "7.000.000",
+      price: "5.000.000",
       popular: true,
       description:
         "Website showroom lengkap untuk meningkatkan kredibilitas bisnis dan mempermudah calon customer melihat unit.",
@@ -166,7 +166,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Professional",
-      price: "6.000.000",
+      price: "5.000.000",
       popular: true,
       description:
         "Website lengkap untuk workshop audio dan modifikasi agar tampil lebih premium dan profesional.",
