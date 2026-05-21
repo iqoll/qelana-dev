@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { About } from "@/components/layout/about";
 import { Portfolio } from "@/components/layout/portfolio";
 import { Price } from "@/components/layout/price";
+import { Footer } from "@/components/layout/footer";
 import WhatsappWidget from "@/components/ui/whatsapp-widget";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Price />
+      <Footer />
       <WhatsappWidget />
       {/* Decorative Circles */}
       <div className="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
