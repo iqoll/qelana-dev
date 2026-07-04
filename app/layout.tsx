@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="id" className="scroll-smooth">
       <body className={`${manrope.variable} font-sans bg-bgLight text-[#131118] antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
