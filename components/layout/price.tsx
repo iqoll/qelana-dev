@@ -11,7 +11,8 @@ const SERVICES_LIST = [
   "UMKM & Bisnis Lokal",
   "Optimasi SEO",
   "Automasi Sistem",
-  "Digital Clinic Growth System"
+  "Digital Clinic Growth System",
+  "Test"
 ];
 
 const PRICING_DATA: Record<string, any> = {
