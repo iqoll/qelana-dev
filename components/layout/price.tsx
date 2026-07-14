@@ -394,6 +394,37 @@ const PRICING_DATA: Record<string, any> = {
         "Scalable Infrastructure for Future Expansion"
       ]
     }
+  ],
+  "Test": [
+    {
+      name: "Private 1-on-1 Implementation",
+      price: "10.000",
+      description:
+        "Sistem digital premium untuk membantu klinik tampil lebih profesional, meningkatkan trust pasien, dan mempermudah booking secara otomatis.",
+
+      features: [
+        "Private Strategy Session & Business Consultation",
+        "Premium Custom Website (No Template)",
+        "Mobile-First Modern Design",
+        "WhatsApp Booking System",
+        "AI Assistant untuk Menjawab FAQ Pasien 24/7",
+        "Automated Patient Inquiry Flow",
+        "Google Maps & Review Integration",
+        "Treatment / Service Showcase",
+        "Online Appointment Request",
+        "Admin-Friendly Content Management",
+        "SEO Foundation untuk Klinik Lokal",
+        "Premium Copywriting Assistance",
+        "Fast Loading & Speed Optimization",
+        "Priority WhatsApp Support",
+        "Custom Domain & Professional Email Setup",
+        "Patient Trust Focused UI/UX",
+        "1-on-1 Onboarding & Training Session",
+        "Analytics & Visitor Tracking",
+        "Post-launch Technical Support",
+        "Scalable Infrastructure for Future Expansion"
+      ]
+    }
   ]
 };
 
