@@ -18,7 +18,7 @@ export default function ButtonContact({ variant = "large", className = "", greet
       target="_blank"
       rel="noopener noreferrer"
     >
-      Mulai Proyek
+      Konsultasi Proyek
     </a>
   );
 }

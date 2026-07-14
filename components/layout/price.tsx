@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Check, Sparkles } from "lucide-react";
 import ButtonContact from "../ui/button-contact";
+import ButtonCheckout from "../ui/button-checkout";
 import Link from "next/link";
 
 const SERVICES_LIST = [
@@ -421,7 +422,7 @@ export function Price() {
             {SERVICES_LIST.map((service) => {
               const isServiceDC = service === "Digital Clinic Growth System";
               const isActive = activeService === service;
-              
+
               let buttonClass = "";
               if (isServiceDC) {
                 if (isActive) {
@@ -456,13 +457,12 @@ export function Price() {
             <div
               key={plan.name}
               data-reveal
-              className={`relative group p-8 rounded-[40px] border transition-all duration-500 flex flex-col ${
-                isDigitalClinic
-                  ? "bg-gradient-to-b from-violet-950/20 to-fuchsia-950/10 border-violet-500/40 shadow-[0_0_35px_rgba(139,92,246,0.25)] hover:shadow-[0_0_50px_rgba(139,92,246,0.5)] scale-105 z-20 animate-fade-in"
-                  : plan.popular
-                    ? "bg-primary/5 border-primary/30 shadow-2xl shadow-primary/10 scale-105 z-20"
-                    : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06] hover:border-white/20"
-              }`}
+              className={`relative group p-8 rounded-[40px] border transition-all duration-500 flex flex-col ${isDigitalClinic
+                ? "bg-gradient-to-b from-violet-950/20 to-fuchsia-950/10 border-violet-500/40 shadow-[0_0_35px_rgba(139,92,246,0.25)] hover:shadow-[0_0_50px_rgba(139,92,246,0.5)] scale-105 z-20 animate-fade-in"
+                : plan.popular
+                  ? "bg-primary/5 border-primary/30 shadow-2xl shadow-primary/10 scale-105 z-20"
+                  : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06] hover:border-white/20"
+                }`}
             >
               {plan.popular && (
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1.5 rounded-full text-xs font-black tracking-widest flex items-center gap-2 shadow-xl">
@@ -489,11 +489,10 @@ export function Price() {
                 <ul className="space-y-4">
                   {plan.features.map((feature: string) => (
                     <li key={feature} className="flex items-start gap-3 group/item">
-                      <div className={`mt-1 size-5 rounded-full flex items-center justify-center shrink-0 transition-colors ${
-                        isDigitalClinic 
-                          ? "bg-violet-500/20 group-hover/item:bg-violet-500" 
-                          : "bg-primary/20 group-hover/item:bg-primary"
-                      }`}>
+                      <div className={`mt-1 size-5 rounded-full flex items-center justify-center shrink-0 transition-colors ${isDigitalClinic
+                        ? "bg-violet-500/20 group-hover/item:bg-violet-500"
+                        : "bg-primary/20 group-hover/item:bg-primary"
+                        }`}>
                         <Check size={12} className={isDigitalClinic ? "text-violet-400 group-hover/item:text-white" : "text-primary group-hover/item:text-white"} />
                       </div>
                       <span className="text-white/70 text-sm font-medium leading-tight">{feature}</span>
@@ -510,11 +509,19 @@ export function Price() {
                   Saya Tertarik
                 </Link>
               ) : (
-                <ButtonContact
-                  variant="large"
-                  greetingMessage={`%20${activeService}%20-%20${plan.name}`}
-                  className={`w-full ${plan.popular ? "bg-primary" : "bg-white/10 hover:bg-white hover:text-black"}`}
-                />
+                <>
+                  <ButtonContact
+                    variant="large"
+                    greetingMessage={`%20${activeService}%20-%20${plan.name}`}
+                    className={`w-full ${plan.popular ? "bg-primary" : "bg-white/10 hover:bg-white hover:text-black"}`}
+                  />
+                  <ButtonCheckout
+                    variant="large"
+                    price={plan.price}
+                    planName={`${activeService} - ${plan.name}`}
+                    className={`w-full ${plan.popular ? "bg-primary" : "bg-white/10 hover:bg-white hover:text-black"}`}
+                  />
+                </>
               )}
             </div>
           ))}
