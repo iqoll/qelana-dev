@@ -397,7 +397,7 @@ const PRICING_DATA: Record<string, any> = {
 };
 
 export function Price() {
-  const [activeService, setActiveService] = useState("Praktik Dental & Umum");
+  const [activeService, setActiveService] = useState(SERVICES_LIST[0]);
 
   const isDigitalClinic = activeService === "Digital Clinic Growth System";
   const isSingleCard = isDigitalClinic || activeService === "Custom";
