@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import {
   ArrowRight, Sparkles, CheckCircle2, PlayCircle,
   Globe, CalendarClock, MessageSquareText, BellRing, Database, Megaphone,
@@ -34,6 +35,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export default function StartLandingPage() {
+  notFound();
   return (
     <div className="min-h-screen bg-[#040914] text-white font-sans selection:bg-violet-500/20 selection:text-violet-300">
       <Navbar />

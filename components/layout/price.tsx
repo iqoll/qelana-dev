@@ -5,32 +5,32 @@ import ButtonCheckout from "../ui/button-checkout";
 import Link from "next/link";
 
 const SERVICES_LIST = [
-  "Praktik Dental & Umum",
+  "Villa & Resort",
   "Showroom Mobil / Motor",
-  "Modifikasi Mobil / Audio System",
+  "Travel & Tour",
   "UMKM & Bisnis Lokal",
   "Optimasi SEO",
   "Automasi Sistem",
-  "Digital Clinic Growth System",
+  //"Digital Clinic Growth System",
 ];
 
 const PRICING_DATA: Record<string, any> = {
-  "Praktik Dental & Umum": [
+  "Villa & Resort": [
     {
       name: "Starter",
-      price: "2.000.000",
+      price: "1.500.000",
       description:
-        "Cocok untuk praktik dokter yang ingin tampil profesional dan mempermudah pasien menghubungi klinik.",
+        "Cocok untuk Villa atau Resort yang ingin tampil profesional dan mempermudah customer menghubungi Villa atau Resort.",
       features: [
         "Free Domain (.com)",
         "Shared Hosting (6 Bulan)",
         "Desain Responsif (Mobile & Desktop)",
         "1 Halaman Landing Page (scroll panjang)",
         "CTA Reservasi via WhatsApp",
-        "Section Dokter & Layanan",
+        "Section Villa & Fasilitas",
         "Google Maps Integration",
         "1 Email Bisnis",
-        "2 GB Disk Storage",
+        "10 GB Disk Storage",
         "2x Revisi Gratis",
         "Free SSL",
         "Garansi Maintenance 15 Hari",
@@ -39,18 +39,18 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Professional",
-      price: "4.000.000",
+      price: "3.000.000",
       popular: true,
       description:
-        "Website lengkap untuk meningkatkan kredibilitas klinik dan mempermudah reservasi pasien.",
+        "Website lengkap untuk meningkatkan kredibilitas Villa atau Resort dan mempermudah reservasiVilla atau Resort.",
       features: [
         "Semua fitur Starter, plus:",
         "Hosting 1 Tahun",
-        "5–7 Halaman Utama (Home, About, Treatment, Galeri, Testimoni, Contact, FAQ)",
-        "Halaman Detail Treatment / Layanan",
+        "5–7 Halaman Utama (Home, About, Akomodasi, Galeri, Testimoni, Contact, FAQ)",
+        "Halaman Detail Akomodasi",
         "Form Reservasi Online",
-        "Galeri Foto & Video Klinik & Fasilitas",
-        "Testimoni Pasien",
+        "Galeri Foto & Video Villa atau Resort & Fasilitas",
+        "Testimoni Villa atau Resort",
         "SEO On-Page Dasar (meta title, slug, heading structure)",
         "2 Email Bisnis",
         "10 GB Disk Storage",
@@ -60,15 +60,15 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Enterprise",
-      price: "8.000.000",
+      price: "6.000.000",
       description:
-        "Sistem digital modern untuk klinik dengan fitur booking dan pembayaran online.",
+        "Sistem digital modern untuk Villa atau Resort dengan fitur booking dan pembayaran online.",
       features: [
         "Semua fitur Professional, plus:",
         "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
-        "Dashboard Booking Pasien",
-        "Form Appointment Otomatis (Nama, Jadwal, Keluhan/Layanan yang Diinginkan)",
-        "Email Notifikasi Otomatis (ke admin & customer)",
+        "Dashboard Booking Villa atau Resort",
+        "Form Appointment Otomatis (Nama, Jadwal, Villa atau Resort yang Diinginkan)",
+        "Email Notifikasi Otomatis (ke Admin & Customer)",
         "Blog & Artikel Edukasi",
         "Fitur Kalender Jadwal Ketersediaan",
         "Desain Interaktif & Animasi",
@@ -84,7 +84,7 @@ const PRICING_DATA: Record<string, any> = {
   "Showroom Mobil / Motor": [
     {
       name: "Starter",
-      price: "2.000.000",
+      price: "1.500.000",
       description:
         "Landing page profesional untuk meningkatkan trust calon buyer dan menampilkan koleksi kendaraan secara elegan.",
       features: [
@@ -105,7 +105,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Professional",
-      price: "5.000.000",
+      price: "3.000.000",
       popular: true,
       description:
         "Website showroom lengkap untuk meningkatkan kredibilitas bisnis dan mempermudah calon customer melihat unit.",
@@ -124,7 +124,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Enterprise",
-      price: "8.000.000",
+      price: "5.000.000",
       description:
         "Platform showroom modern dengan sistem inquiry dan booking digital untuk meningkatkan konversi penjualan.",
       features: [
@@ -143,20 +143,20 @@ const PRICING_DATA: Record<string, any> = {
     }
   ],
 
-  "Modifikasi Mobil / Audio System": [
+  "Travel & Tour": [
     {
       name: "Starter",
-      price: "2.500.000",
+      price: "1.500.000",
       description:
-        "Landing page modern untuk menampilkan hasil modifikasi dan meningkatkan trust calon customer.",
+        "Landing page modern untuk menampilkan paket tour dan meningkatkan trust calon customer.",
       features: [
         "Free Domain (.com)",
         "Shared Hosting (6 Bulan)",
         "Desain Responsif (Mobile & Desktop)",
         "1 Halaman Landing Page (scroll panjang)",
         "CTA Konsultasi via WhatsApp",
-        "Galeri Hasil Modifikasi (Before & After)",
-        "Section Produk & Layanan",
+        "Galeri Paket Tour",
+        "Section Paket Tour",
         "Google Maps Integration",
         "1 Email Bisnis",
         "2 GB Disk Storage",
@@ -168,19 +168,19 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Professional",
-      price: "5.000.000",
+      price: "3.000.000",
       popular: true,
       description:
-        "Website lengkap untuk workshop audio dan modifikasi agar tampil lebih premium dan profesional.",
+        "Website lengkap untuk Travel & Tour agar tampil lebih premium dan profesional.",
       features: [
         "Semua fitur Starter",
         "Hosting 1 Tahun",
-        "5–7 Halaman Utama (Home, About Us, Project, Products, Services, Contact, FAQ)",
-        "Page Individual untuk Setiap Layanan/Paket",
-        "Form Booking Instalasi",
+        "5–7 Halaman Utama (Home, About Us, Paket Tour, Testimoni, Contact, FAQ)",
+        "Page Individual untuk Setiap Paket Tour",
+        "Form Booking Paket Tour",
         "Testimoni Customer",
         "SEO On-Page Basic (meta title, slug, heading structure)",
-        "CTA WhatsApp di setiap halaman Layanan",
+        "CTA WhatsApp di setiap halaman Paket Tour",
         "2 Email Bisnis",
         "10 GB Disk Storage",
         "3x Revisi Gratis",
@@ -189,14 +189,14 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Enterprise",
-      price: "12.000.000",
+      price: "6.000.000",
       description:
-        "Sistem digital modern untuk workshop audio dan modifikasi dengan fitur booking dan inquiry otomatis.",
+        "Sistem digital modern untuk Travel & Tour dengan fitur booking dan inquiry otomatis.",
       features: [
         "Semua fitur Professional, plus:",
         "Integrasi Payment Gateway (Midtrans / Tripay / Xendit / Stripe)",
-        "Online Booking System (Nama, Jadwal, Jasa yang Diinginkan)",
-        "Email/WhatsApp Notifikasi Otomatis (ke admin & customer)",
+        "Online Booking System (Nama, Jadwal, Paket Tour yang Diinginkan)",
+        "Email/WhatsApp Notifikasi Otomatis (ke Admin & Customer)",
         "CMS Editable",
         "Desain Interaktif & Animasi (Parallax & Smooth Scroll)",
         "Speed Optimization",
@@ -210,7 +210,7 @@ const PRICING_DATA: Record<string, any> = {
   "UMKM & Bisnis Lokal": [
     {
       name: "Starter",
-      price: "1.500.000",
+      price: "1.000.000",
       description:
         "Landing page profesional untuk membantu UMKM tampil lebih terpercaya dan mudah dihubungi customer.",
       features: [
@@ -231,7 +231,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Professional",
-      price: "3.500.000",
+      price: "2.500.000",
       popular: true,
       description:
         "Website company profile lengkap untuk meningkatkan kredibilitas dan penjualan bisnis lokal.",
@@ -252,7 +252,7 @@ const PRICING_DATA: Record<string, any> = {
     },
     {
       name: "Enterprise",
-      price: "7.500.000",
+      price: "5.000.000",
       description:
         "Sistem website modern untuk UMKM yang ingin meningkatkan penjualan dan otomatisasi bisnis.",
       features: [
@@ -362,39 +362,38 @@ const PRICING_DATA: Record<string, any> = {
         "Maintenance 12 Bulan"
       ]
     }
-  ],
+  ]
+  // "Digital Clinic Growth System": [
+  //   {
+  //     name: "Private 1-on-1 Implementation",
+  //     price: "15.000.000 - 25.000.000+",
+  //     description:
+  //       "Sistem digital premium untuk membantu klinik tampil lebih profesional, meningkatkan trust pasien, dan mempermudah booking secara otomatis.",
 
-  "Digital Clinic Growth System": [
-    {
-      name: "Private 1-on-1 Implementation",
-      price: "15.000.000 - 25.000.000+",
-      description:
-        "Sistem digital premium untuk membantu klinik tampil lebih profesional, meningkatkan trust pasien, dan mempermudah booking secara otomatis.",
-
-      features: [
-        "Private Strategy Session & Business Consultation",
-        "Premium Custom Website (No Template)",
-        "Mobile-First Modern Design",
-        "WhatsApp Booking System",
-        "AI Assistant untuk Menjawab FAQ Pasien 24/7",
-        "Automated Patient Inquiry Flow",
-        "Google Maps & Review Integration",
-        "Treatment / Service Showcase",
-        "Online Appointment Request",
-        "Admin-Friendly Content Management",
-        "SEO Foundation untuk Klinik Lokal",
-        "Premium Copywriting Assistance",
-        "Fast Loading & Speed Optimization",
-        "Priority WhatsApp Support",
-        "Custom Domain & Professional Email Setup",
-        "Patient Trust Focused UI/UX",
-        "1-on-1 Onboarding & Training Session",
-        "Analytics & Visitor Tracking",
-        "Post-launch Technical Support",
-        "Scalable Infrastructure for Future Expansion"
-      ]
-    }
-  ],
+  //     features: [
+  //       "Private Strategy Session & Business Consultation",
+  //       "Premium Custom Website (No Template)",
+  //       "Mobile-First Modern Design",
+  //       "WhatsApp Booking System",
+  //       "AI Assistant untuk Menjawab FAQ Pasien 24/7",
+  //       "Automated Patient Inquiry Flow",
+  //       "Google Maps & Review Integration",
+  //       "Treatment / Service Showcase",
+  //       "Online Appointment Request",
+  //       "Admin-Friendly Content Management",
+  //       "SEO Foundation untuk Klinik Lokal",
+  //       "Premium Copywriting Assistance",
+  //       "Fast Loading & Speed Optimization",
+  //       "Priority WhatsApp Support",
+  //       "Custom Domain & Professional Email Setup",
+  //       "Patient Trust Focused UI/UX",
+  //       "1-on-1 Onboarding & Training Session",
+  //       "Analytics & Visitor Tracking",
+  //       "Post-launch Technical Support",
+  //       "Scalable Infrastructure for Future Expansion"
+  //     ]
+  //   }
+  // ],
 };
 
 export function Price() {
